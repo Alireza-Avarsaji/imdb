@@ -1,1 +1,24 @@
-<p>movies works!</p>
+<section class="d-flex flex-wrap col-12 justify-content-start align-items-start">
+
+  <div *ngFor="let item of arr; let i = index" class="col-3 p-2">
+    <mat-card class="example-card col-12">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>Here is the description of the movie
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-icon-button matTooltip="new comment">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
+            <mat-icon>notes</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+  </div>
+
+  <input type="file" (change)="upload($event)">
+
+
+</section>
