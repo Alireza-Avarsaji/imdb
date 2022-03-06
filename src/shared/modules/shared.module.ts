@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
 
@@ -17,7 +18,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     CommonModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   exports: [
     FormsModule,
@@ -27,7 +29,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     CommonModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [
 

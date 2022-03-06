@@ -8,7 +8,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-icon-button matTooltip="new comment">
+          <button mat-icon-button matTooltip="new comment" (click)="createComment()">
             <mat-icon>add_circle_outline</mat-icon>
           </button>
           <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
@@ -17,8 +17,6 @@
         </mat-card-actions>
       </mat-card>
   </div>
-
-  <input type="file" (change)="upload($event)">
 
 
 </section>

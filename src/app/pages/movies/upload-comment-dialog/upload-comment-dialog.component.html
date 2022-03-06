@@ -1,0 +1,15 @@
+<section class="h-100 d-flex flex-wrap justify-content-center align-items-between align-content-between">
+    <div class="d-flex flex-wrap col-12 justify-content-center">
+        <label class="d-flex flex-wrap justify-content-center align-items-center p-1" for="upload">
+            <small class="text-center m-0">choose audio</small>
+        </label>
+        <input id="upload" type="file" (change)="load($event)">
+    </div>
+    <div *ngIf="file" class="d-flex flex-wrap justify-content-center align-items-center">
+        <p class="me-2">selected file:</p>
+        <p>{{fileName}}</p>
+    </div>
+    <div class="d-flex flex-wrap col-12 justify-content-center">
+        <button mat-raised-button color="primary" (click)="upload()" [disabled]="!file">Upload</button>
+    </div>
+</section>

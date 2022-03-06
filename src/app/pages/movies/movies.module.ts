@@ -1,3 +1,4 @@
+import { UploadCommentDialogComponent } from './upload-comment-dialog/upload-comment-dialog.component';
 import { MoviesComponent } from './movies.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,7 +10,8 @@ const routes = [
 
 @NgModule({
   declarations: [
-    MoviesComponent
+    MoviesComponent,
+    UploadCommentDialogComponent
   ],
   imports: [
     RouterModule.forChild(routes),
