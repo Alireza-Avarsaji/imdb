@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CommentsService } from 'src/shared/http-services/comments.service';
 
 @Component({
@@ -10,8 +11,13 @@ export class UploadCommentDialogComponent implements OnInit {
 
   file: string = '';
   fileName: string = '';
+  movieId!: number;
 
-  constructor(private service: CommentsService) { }
+  constructor(private service: CommentsService,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private dialog: MatDialogRef<UploadCommentDialogComponent>) {
+      this.movieId = data.movieId;
+     }
 
   ngOnInit(): void {
   }
@@ -28,8 +34,9 @@ export class UploadCommentDialogComponent implements OnInit {
   }
 
   upload(){
-    this.service.uploadComment(this.file).subscribe(res => {
+    this.service.uploadComment(this.file, this.movieId).subscribe(res => {
       console.log(res);
+      this.dialog.close(true);
     });
   }
 

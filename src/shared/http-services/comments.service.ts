@@ -9,11 +9,12 @@ import { Injectable } from '@angular/core';
 export class CommentsService extends HttpBaseService {
 
   constructor(public http: HttpClient) {
-    super();
+    super(http);
    }
 
-  uploadComment(base64: string){
+  uploadComment(base64: string, id: number){
     let body = {
+      movieId: id,
       voice: base64
     }
     return this.http.post<CommentResponse>(`${this.apiUrl}/user/voiceconverter`, body);

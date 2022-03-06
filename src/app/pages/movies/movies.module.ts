@@ -3,6 +3,7 @@ import { MoviesComponent } from './movies.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/shared/modules/shared.module';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const routes = [
   { path: '', component: MoviesComponent },
@@ -15,7 +16,8 @@ const routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    MatSnackBarModule
   ],
   providers: [
   ],

@@ -1,14 +1,13 @@
 <section class="d-flex flex-wrap col-12 justify-content-start align-items-start">
 
-  <div *ngFor="let item of arr; let i = index" class="col-3 p-2">
+  <div *ngFor="let movie of movies; let i = index" class="col-3 p-2">
     <mat-card class="example-card col-12">
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image [src]="movie.url" alt="movie photo">
         <mat-card-content>
-          <p>Here is the description of the movie
-          </p>
+          <p>{{movie?.name}}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-icon-button matTooltip="new comment" (click)="createComment()">
+          <button mat-icon-button matTooltip="new comment" (click)="createComment(movie)">
             <mat-icon>add_circle_outline</mat-icon>
           </button>
           <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
