@@ -1,3 +1,4 @@
+import { CommentResponse } from './../models/comment.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -12,6 +13,6 @@ export class CommentsService {
     let body = {
       voice: base
     }
-    return this.http.post<string>('https://192.168.2.49:5001/user/voiceconverter', body);
+    return this.http.post<CommentResponse>('https://192.168.2.49:5001/user/voiceconverter', body);
   }
 }
