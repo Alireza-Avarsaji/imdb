@@ -4,10 +4,8 @@ import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from 'src/shared/http-services/modules/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from 'src/shared/modules/shared.module';
 
 const routes = [
   {
