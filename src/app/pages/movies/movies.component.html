@@ -1,19 +1,19 @@
 <section class="d-flex flex-wrap col-12 justify-content-start align-items-start">
 
-  <div *ngFor="let movie of movies; let i = index" class="col-3 p-2">
-    <mat-card class="example-card col-12">
-        <img mat-card-image [src]="movie.url" alt="movie photo">
-        <mat-card-content>
-          <p>{{movie?.name}}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-icon-button matTooltip="new comment" (click)="createComment(movie)">
-            <mat-icon>add_circle_outline</mat-icon>
-          </button>
-          <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
-            <mat-icon>notes</mat-icon>
-          </button>
-        </mat-card-actions>
+  <div *ngFor="let movie of movies; let i = index" class="d-flex flex-wrap justify-content-center col-4 p-2">
+    <mat-card class="d-flex flex-wrap col-12 p-0">
+        <img class="col-7"  [src]="movie.url" alt="movie photo">
+        <div class="d-flex flex-wrap justify-content-center align-content-between col-5 p-2">
+          <h2 class="col-12 text-center">{{movie?.name}}</h2>
+          <div class="d-flex flex-wrap col-12 justify-content-end align-content-center">
+            <button mat-icon-button matTooltip="new comment" (click)="createComment(movie)">
+              <mat-icon>add_circle_outline</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
+              <mat-icon>notes</mat-icon>
+            </button>
+          </div>
+        </div>
       </mat-card>
   </div>
 

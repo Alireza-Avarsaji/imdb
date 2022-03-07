@@ -1,5 +1,5 @@
 import { HttpBaseService } from './http-base.service';
-import { CommentResponse } from './../models/comment.model';
+import { CommentResponse, CommentsModel } from './../models/comment.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -18,5 +18,10 @@ export class CommentsService extends HttpBaseService {
       voice: base64
     }
     return this.http.post<CommentResponse>(`${this.apiUrl}/user/voiceconverter`, body);
+  }
+
+
+  getCommentsByMovieId(movieId: number, lang: string){
+    return this.http.get<CommentsModel>(`${this.apiUrl}/user/translate/${movieId}?lang=${lang}`);
   }
 }
