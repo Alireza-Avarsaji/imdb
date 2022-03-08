@@ -12,16 +12,16 @@ export class CommentsService extends HttpBaseService {
     super(http);
    }
 
-  uploadComment(base64: string, id: number){
+  uploadComment(base64: string, id: string){
     let body = {
       movieId: id,
       voice: base64
     }
-    return this.http.post<CommentResponse>(`${this.apiUrl}/user/voiceconverter`, body);
+    return this.http.post<CommentResponse>(`${this.apiUrl}/imbd/addcomment`, body);
   }
 
 
-  getCommentsByMovieId(movieId: number, lang: string){
-    return this.http.get<CommentsModel>(`${this.apiUrl}/user/translate/${movieId}?lang=${lang}`);
+  getCommentsByMovieId(movieId: string, lang: string){
+    return this.http.get<CommentsModel>(`${this.apiUrl}/imbd/getcomments/${movieId}/${lang}`);
   }
 }

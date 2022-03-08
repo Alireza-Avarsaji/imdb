@@ -1,3 +1,4 @@
+import { SharedModule } from './../../../shared/modules/shared.module';
 import { CommentsComponent } from './comments.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -11,7 +12,8 @@ const routes = [
     CommentsComponent
   ],
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule
   ],
   providers: [
   ],

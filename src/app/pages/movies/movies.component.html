@@ -1,7 +1,7 @@
 <section class="d-flex flex-wrap col-12 justify-content-start align-items-start">
 
-  <div *ngFor="let movie of movies; let i = index" class="d-flex flex-wrap justify-content-center col-4 p-2">
-    <mat-card class="d-flex flex-wrap col-12 p-0">
+  <div *ngFor="let movie of movies; let i = index" class="d-flex flex-wrap justify-content-center col-xxl-3 col-lg-4 col-md-6 col-10 p-2">
+    <mat-card class="d-flex flex-wrap col-12 p-0 main-card">
         <img class="col-7"  [src]="movie.url" alt="movie photo">
         <div class="d-flex flex-wrap justify-content-center align-content-between col-5 p-2">
           <h2 class="col-12 text-center">{{movie?.name}}</h2>
@@ -9,7 +9,7 @@
             <button mat-icon-button matTooltip="new comment" (click)="createComment(movie)">
               <mat-icon>add_circle_outline</mat-icon>
             </button>
-            <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', i]">
+            <button mat-icon-button matTooltip="all comments" [routerLink]="['/comments', movie.id]">
               <mat-icon>notes</mat-icon>
             </button>
           </div>

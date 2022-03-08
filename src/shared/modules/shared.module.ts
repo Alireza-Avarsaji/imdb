@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
 
@@ -19,7 +21,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     MatCardModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatFormFieldModule
   ],
   exports: [
     FormsModule,
@@ -30,7 +34,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     MatCardModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatFormFieldModule
   ],
   providers: [
 

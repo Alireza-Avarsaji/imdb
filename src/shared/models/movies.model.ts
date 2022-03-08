@@ -1,5 +1,6 @@
 export class MovieModel{
-    id!: number;
+    id!: string;
     name!: string;
     url!: string;
+    year!: number
 }

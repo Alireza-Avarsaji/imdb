@@ -1,8 +1,9 @@
 img{
-    min-height: 340px;
     object-fit: cover;
+    height: 100%;
 }
 
-.card{
-    
+.main-card{
+    min-height: 350px;
+    max-height: 350px;
 }

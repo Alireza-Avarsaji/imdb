@@ -3,6 +3,5 @@ export class CommentResponse{
 }
 
 export class CommentsModel{
-    comment_body: string[] = [];
-    lang!: string;
+    comments: string[] = [];
 }

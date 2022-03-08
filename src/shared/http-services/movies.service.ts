@@ -14,6 +14,6 @@ export class MoviesService extends HttpBaseService {
    }
 
   getAll(): Observable<MovieModel[]>{
-    return this.http.get<MovieModel[]>(`${this.apiUrl}/movies`);
+    return this.http.get<MovieModel[]>(`${this.apiUrl}/imbd/getmovies`);
   }
 }

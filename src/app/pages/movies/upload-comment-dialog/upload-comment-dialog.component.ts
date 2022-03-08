@@ -11,7 +11,7 @@ export class UploadCommentDialogComponent implements OnInit {
 
   file: string = '';
   fileName: string = '';
-  movieId!: number;
+  movieId!: string;
 
   constructor(private service: CommentsService,
     @Inject(MAT_DIALOG_DATA) public data: any,

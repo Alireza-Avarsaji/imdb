@@ -40,11 +40,10 @@ export class MoviesComponent implements OnInit {
         movieId: movie.id
       }
     });
-
     dialogRef.afterClosed().subscribe(res => {
-      this.openSnackBar('comment added successfully');
+      if(res)
+        this.openSnackBar('comment added successfully');
     });
-
   }
 
   openSnackBar(message: string) {
