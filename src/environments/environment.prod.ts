@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://192.168.2.49:5001'
+  apiUrl: 'https://cloud-computing-api.darkube.app'
 };
